@@ -5,26 +5,47 @@ const isLocal = typeof process.pkg === "undefined";
 const basePath = isLocal ? process.cwd() : path.dirname(process.execPath);
 const { MODE } = require(path.join(basePath, "src/blendMode.js"));
 const description =
-  "description of your collection";
+  "The Lost Crew NFT is a collection of 799 Outlaws that have returned to the metaverse after their escape from Yhuko, the destroyer. There are 790 members, 8 are Guardians of the Citadel, and 1 is Yhuko! Every Lost Crew NFT is completely unique, having multiple traits with over 200+ assets.";
 const baseUri = "";
 
 //Added metadata for solana
-const collectionName = "Name Of Collection";
-const symbol = "Symbol Of Collection";
+const collectionName = "Lost Crew Member";
+const symbol = "OC";
 //Define how much % you want from second market sales 1000 = 10%
-const seller_fee_basis_points = 1000;
-const external_url = "https://yourwebsite.com";
+const seller_fee_basis_points = 500;
+const external_url = "";
 
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 55,
     layersOrder: [
       { name: "Background" },
-      { name: "Bottom lid" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Top lid" },
+      { name: "Brown" },
+      { name: "Nose" },
+      { name: "Eyes" },
+      { name: "Hair" },
+      { name: "Clothing" },
+      { name: "Brown Ears" },
+      { name: "Mouth" },
+      
+      { name: "Glasses" },
+      { name: "Durag" },
+    ],
+  },
+  {
+    growEditionSizeTo: 110,
+    layersOrder: [
+      { name: "Background" },
+      { name: "Ash" },
+      { name: "Nose" },
+      { name: "Eyes" },
+      { name: "Hair" },
+      { name: "Clothing" },
+      { name: "Ashen Ears" },
+      { name: "Mouth" },
+      
+      { name: "Glasses" },
+      { name: "Durag" },
     ],
   },
 ];
@@ -58,8 +79,8 @@ const preview = {
 
 // This is a optinal feature you can use to define if your NFT is a part of a collection
 const collection = {
-  name: "Collection name",
-  family: "Collection family"
+  name: "The Lost Crew",
+  family: ""
 };
 
 
@@ -75,8 +96,12 @@ const properties = {
   category: "image",
   creators: [
     {
-      "address": "Your Solana Address",
-      "share": 100
+      "address": "Dr3wk5k5hfhrLvb6JvZMFCBEixAb2mMCmBm8JmY7tuJM",
+      "share": 50
+    },
+    {
+      "address": "6BJc94jdF17tofuxQ2HbmPBsEJMgji1Lc4EJqcSsER3t",
+      "share": 50
     }
   ]
 };
